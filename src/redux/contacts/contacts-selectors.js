@@ -1,6 +1,6 @@
-import { getFilterValue } from "redux/filter/filter-selectors";
+import { getFilterValue } from "../filter/filter-selectors";
 
-export const getContacts = (state) => state.contacts.items; //простые селекторы
+export const getContacts = (state) => state.contacts.items;
 
 export const getvisibleContacts = (state) => {
   const contacts = getContacts(state);
@@ -12,7 +12,6 @@ export const getvisibleContacts = (state) => {
       number.includes(filter)
   );
 };
-// сложные или составные/композитные селекторы
 
 // ---------------------------------
 // селекторы это функции которые знают о том, как выглядит состояние, о внешнем виде
